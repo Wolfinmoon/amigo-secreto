@@ -1,10 +1,10 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #9a05df;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
     --color-button-hover: #e55720;
-    --color-text: #444444;
+    --color-text: #000000;
     --color-white: #FFFFFF;
 }
 
@@ -136,7 +136,7 @@ ul {
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #9a05df;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -159,4 +159,98 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.animate {
+    animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+button {
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+}
+
+
+body {
+    animation: backgroundGradient 5s infinite alternate;
+}
+
+@keyframes backgroundGradient {
+    0% {
+        background-color: #cca0ff;
+    }
+    50% {
+        background-color: #bb7fff;
+    }
+    100% {
+        background-color: #a04eff;
+    }
+}
+
+/* Estilo para a lista */
+#listaAmigos {
+    list-style-type: none; /* Remove os marcadores padrões */
+    padding: 0;
+    margin-top: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para cada item da lista */
+#listaAmigos li {
+    background-color: #f5f5f5; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Arredondar os cantos */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Ícone antes do nome */
+#listaAmigos li::before {
+    content: "👤"; /* Ícone de amigo */
+    font-size: 20px;
+}
+
+/* Efeito hover */
+#listaAmigos li:hover {
+    background-color: #ffffff; /* Cor de destaque */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais evidente */
+    transform: translateY(-2px); /* Efeito de "levantar" */
+    transition: all 0.2s ease-in-out;
+}
+
+#listaAmigos li {
+    opacity: 0;
+    transform: translateY(10px); /* Posição inicial mais abaixo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transição suave */
+}
+
+/* Quando o item for adicionado, ele terá opacidade 1 e posição normal */
+#listaAmigos li.show {
+    opacity: 1;
+    transform: translateY(0); /* Volta à posição normal */
 }

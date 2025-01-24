@@ -20,6 +20,9 @@ function mostrarAmigos(){
         let item = document.createElement('li');
         item.textContent = amigo;
         lista.appendChild(item);
+        setTimeout(() => {
+            item.classList.add("show");
+        }, 10);
     });
 
 }
@@ -32,6 +35,9 @@ function sortearAmigo(){
      let indiceAleatorio = Math.floor(Math.random() * amigos.length);
      let amigoSorteado = amigos[indiceAleatorio];
      let resultado = document.getElementById('resultado');
+     resultado.classList.remove('animate');
+    void resultado.offsetWidth; 
+    resultado.classList.add('animate');
      resultado.innerHTML = `Amigo sorteado <strong>${amigoSorteado}</strong>`
 
 
