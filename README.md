@@ -41,6 +41,11 @@ Este projeto foi desenvolvido como parte de um desafio proporcionado pela Alura 
 ## 🎉 Demonstração
 ![Demonstração do Projeto](./assets/Amigo_Secreto.gif)
 
+Teste você mesmo! ✨  
+ ```bash
+     https://amigosecreto-sepia.vercel.app
+   ```
+
 ---
 
 ## 🛠️ Próximos passos
